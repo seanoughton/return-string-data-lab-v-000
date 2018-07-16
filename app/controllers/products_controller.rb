@@ -21,12 +21,15 @@ class ProductsController < ApplicationController
       end
     end
 =end
+=begin
   if product.inventory >= 1
     answer = "true"
   else
     answer = "false"
   end
     render plain: answer
+=end
+    render plain: product.inventory > 0 ? true : false
   end
 
   def new
